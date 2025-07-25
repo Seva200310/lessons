@@ -68,18 +68,6 @@ class Contoller():
         self.Ddata.append(D_comp)
         return thrust
 
-# Релейный регулятор
-class Relay():
-    def __init__(self):
-       self.Pdata = []
-       self.Idata = []
-       self.Ddata = []
-    def calc_thrust(self,current_speed,target_speed, max_thrust = 1, min_thrust = -0.2):
-        if current_speed < target_speed:
-            thrust = max_thrust
-        else:
-            thrust = min_thrust
-        return thrust
 
 # Параметры симуляции
 max_engine_power = 20# Максимальныая тяга двигателей в Ньютонах
